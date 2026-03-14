@@ -67,8 +67,6 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       {sidebarOpen && (
         <div className="fixed inset-0 z-40 bg-foreground/20 backdrop-blur-sm lg:hidden" onClick={() => setSidebarOpen(false)} />
       )}
-
-      {/* Sidebar */}
       <aside className={`fixed lg:static inset-y-0 left-0 z-50 w-72 healthcare-gradient flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="flex items-center gap-3 px-6 py-5 border-b border-sidebar-border">
           <div className="w-10 h-10 rounded-xl bg-sidebar-primary/20 flex items-center justify-center">
@@ -124,8 +122,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           </Button>
         </div>
       </aside>
-
-      {/* Main content */}
+      
       <main className="flex-1 overflow-y-auto">
         <header className="sticky top-0 z-30 bg-background/80 backdrop-blur-md border-b px-6 py-4 flex items-center gap-4">
           <button className="lg:hidden" onClick={() => setSidebarOpen(true)}>
